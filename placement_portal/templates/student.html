@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<section>
+
+<div class="profileheading"><h3>Welcome {{ rec[0] }}</h3></div>
+<div class="profile">
+
+
+        <div class="card">
+          <!-- front of the card -->
+          <div class="card-side card-front">
+            <img src="{{ url_for("static",filename="image/"+rec[11]) }}" alt="" />
+            <div class="card-info">
+              <h4></h4>
+             <table class="profile_info">
+                 <tr > <th>Name </th> <th> {{ rec[0] }}</th></tr>
+                 <tr> <th>Id </th> <th> {{ rec[1] }}</th></tr>
+                 <tr> <th>Branch </th> <th> {{ rec[6] }}</th></tr>
+             </table>
+              <div class="card-footer">
+                <img src="{{ url_for("static",filename="image/gcoeaicon.png") }}" alt="author image" />
+                <p>GCOEA</p>
+              </div>
+            </div>
+          </div>
+          <!-- card back  -->
+          <div class="card-side card-back">
+            <a href="{{ url_for("apply") }}" class="btn">Apply</a>
+          </div>
+        </div>
+
+
+    <table class="newtable">
+
+        <tr class="row"><th>Name</th><td>{{ rec[0] }}</td></tr>
+        <tr class="row"><th>Id</th><td>{{ rec[1] }}</td></tr>
+    <tr class="row"><th>Email Id</th><td>{{ rec[2] }}</td></tr>
+        <tr class="row"><th>Mobile No</th><td>{{ rec[3] }}</td></tr>
+        <tr class="row"><th>CGPA</th><td>{{ rec[4] }}</td></tr>
+        <tr class="row"><th>Address</th><td>{{ rec[5] }}</td></tr>
+        <tr class="row"><th>Branch</th><td>{{ rec[6] }}</td></tr>
+        <tr class="row"><th>Year</th><td>{{ rec[7] }}</td></tr>
+        <tr class="row"><th>Language</th><td>{{ rec[8] }}</td></tr>
+        <tr class="row"><th>Gender</th><td>{{ rec[9] }}</td></tr>
+    </table></div>
+
+     <button class="modal-btn btn"  >View Resume
+     </button>
+
+    <div class="modal-overlay"> <div class="modal-container">
+        <h3>Resume</h3>
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <iframe class="resume-cv" src="{{ url_for("static",filename="resume/"+rec[10])}}" width="50vw" height="100vh" ></iframe>
+      </div></div>
+
+    <div class="apply">
+        <a href="{{ url_for("apply") }}" class="btn">Apply for a company </a>
+    </div>
+
+</section>
+<script src="{{ url_for("static",filename="resume.js") }}"></script>
+</body>
+</html>

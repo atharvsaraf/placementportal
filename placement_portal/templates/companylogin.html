@@ -1,0 +1,26 @@
+<html>
+<body>
+<head>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+
+</head>
+<header class="regback">
+    <div class="regmain">
+    <section class="clip-path cpcomp">
+<article class="reg-inner">
+            <form action="{{ url_for("companylogin") }}" method="POST" class="regform">
+                <div><h3 class="reghead"> Company Login</h3></div>
+               <div class="msg">{{ msg }}</div>
+                <div>  <input type="text" name="username" class="info" placeholder=" USERNAME "></div>
+                <div>  <input type="text" name="pswd" class="info" placeholder="PASSWORD"></div>
+
+                <div>  <input type="submit" class="info regsub" ></div>
+            </form>
+
+
+
+</article>
+    </section></div>
+
+</header></body>
+</html>

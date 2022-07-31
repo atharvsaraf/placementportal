@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{ url_for('static',filename='allstudents.css') }}" type="text/css" rel="stylesheet" >
+</head>
+<body>
+<div class="achead">
+    <h1 class="blackhead">Students Info</h1>
+</div>
+<div class="tables">
+    <table class="newtable">
+        <tr class="row"><th>Name</th><th>Id</th><th>email id</th><th>mobile no.</th><th>CGPA</th>
+        <th>Address</th><th>branch</th><th>year</th><th>lang</th><th>gender</th></tr>
+        {% for nm,id,emailid,mob,cgpa,add,branch,year,lang,gender,resume,image,srno in rec %}
+        <tr class="row"><th>{{ nm }}</th><th>{{ id }}</th><th>{{ emailid }}</th><th>{{ mob }}</th><th>{{cgpa }}</th>
+        <th>{{ add }}</th><th>{{ branch }}</th><th>{{ year }}</th><th>{{ lang }}</th><th>{{ gender }}</th></tr>
+        {% endfor %}
+
+    </table>
+</div>
+</body>
+</html>

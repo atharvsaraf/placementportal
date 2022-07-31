@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for("static",filename="admin.css") }}" type="text/css">
+</head>
+<body>
+<header id="home">
+      <nav class="navbar">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="{{ url_for("static",filename="image/gcoeaicon.png")}}" alt="" class="nav-logo">
+            <button type="button" class="nav-toggle" id="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+            <ul class="nav-links show-links" id="nav-links">
+              <li>
+                <a href="#home" class="nav-link scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link scroll-link">about</a>
+              </li>
+              <li>
+                <a href="{{ url_for("faq") }}" class="nav-link scroll-link">FAQ</a>
+              </li>
+              <li>
+                <a href="#featured" class="nav-link scroll-link">featured</a>
+              </li>
+              <li>
+                <a href="#gallery" class="nav-link scroll-link">gallery</a>
+              </li>
+
+            </ul>
+          <ul class="nav-icons">
+            <li>
+              <a href="https://facebook.com/" class="nav-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" class="nav-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.whatsapp.com/" class="nav-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    <div class="hero">
+      <div class="hero-banner">
+        <h1>Placement Portal</h1>
+        <p>
+            Make your dream come true.
+        </p>
+
+        <a href="{{ url_for("studinfo") }}" class="btn hero-btn scroll-link">Student Info</a>
+          <a href="{{ url_for("companyinfo") }}" class="btn hero-btn scroll-link">Company Info</a>
+
+      </div>
+    </div>
+
+    </header>
+
+</body>
+</html>

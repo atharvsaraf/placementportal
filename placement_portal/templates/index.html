@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Placement portal</title>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.12.1-web/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<header id="home">
+      <nav class="navbar">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="{{ url_for("static",filename="image/gcoeaicon.png")}}" alt="" class="nav-logo">
+            <button type="button" class="nav-toggle" id="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+            <ul class="nav-links show-links" id="nav-links">
+              <li>
+                <a href="#home" class="nav-link scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link scroll-link">about</a>
+              </li>
+              <li>
+                <a href="{{ url_for("faq") }}" class="nav-link scroll-link">FAQ</a>
+              </li>
+              <li>
+                <a href="#featured" class="nav-link scroll-link">featured</a>
+              </li>
+              <li>
+                <a href="#gallery" class="nav-link scroll-link">gallery</a>
+              </li>
+
+            </ul>
+          <ul class="nav-icons">
+            <li>
+              <a href="https://facebook.com/" class="nav-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" class="nav-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.whatsapp.com/" class="nav-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+    <div class="hero">
+      <div class="hero-banner">
+        <h1>Placement Portal</h1>
+        <p>
+            Make your dream come true.
+        </p>
+
+        <a href="{{ url_for("studlogin") }}" class="btn hero-btn scroll-link">Student login</a>
+          <a href="{{ url_for("adminlogin") }}" class="btn hero-btn scroll-link">Admin login</a>
+          <a href="{{ url_for("companylogin") }}" class="btn hero-btn scroll-link">Company login</a>
+          <div class="reg"><a href="{{ url_for("regestration") }}" class="btn hero-btn scroll-link">New Student Regestration</a></div>
+          <div class="reg"><a href="{{ url_for("compreg") }}" class="btn hero-btn scroll-link">Company Regestration</a></div>
+      </div>
+    </div>
+
+    </header>
+<section class="section" id="about">
+      <div class="section-title">
+        <h2>
+          ABOUT <span>GCOEA</span>
+        </h2>
+
+      </div>
+      <div class="section-center about-center">
+        <article class="about-img">
+          <img src="{{ url_for("static",filename="image/gcoea.jpg") }}" class="about-photo" alt="">
+        </article>
+        <article class="about-info">
+          <h3>VISION </h3>
+          <p>
+              Towards Global Technological Excellence</p>
+<h3>MISSION</h3>
+            <p>
+Creating Human resource of global competence
+Providing excellent academic and research environment
+Striving For development through technology transfer
+Inculcating the attitude of entrepreneurshi</p>
+          <a href="#" class="btn">read more</a>
+        </article>
+      </div>
+    </section>
+<section class="section" id="featured">
+      <div class="section-title">
+        <h2>featured <span>companies</span></h2>
+
+      </div>
+      <div class="section-center featured-center">
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for("static",filename="image/TCS.jpg")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              august 25 2021
+            </p></div>
+            <div class="tour-info">
+              <h4>TCS</h4>
+              <p>Experience Certainty
+Experience Energy
+Beyond the Obvious.</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                India
+                </span>
+              </p>
+              <p>Avg pkg</p>
+              <p>4LPA</p>
+            </div>
+            </div>
+
+        </article>
+        <article class="tour-card">
+          <div class="tour-img-container">
+             <img src="{{ url_for("static",filename="image/Google-Logo-small.jpg")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              march 25 2021
+            </p>
+          </div>
+          <div class="tour-info">
+            <h4>GOOGLE</h4>
+            <p>Don’t be evil
+Do the right thing
+Organize the World’s Information</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  USA
+                </span>
+              </p>
+              <p>Avg pkg</p>
+              <p>12LPA</p>
+            </div>
+          </div>
+
+        </article>
+        <article class="tour-card">
+          <div class="tour-img-container">
+             <img src="{{ url_for("static",filename="image/Amazon-logo.png")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              november 25 2021
+            </p>
+          </div>
+          <div class="tour-info">
+            <h4>AMAZON</h4>
+            <p>Work hard, Have fun, Make history
+
+And You’re Done!
+
+You Shop, Amazon Gives
+
+Kya Nahi Milega!
+
+Amazon hai, Apna Dukaan</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  hongkong
+                </span>
+              </p>
+              <p>Avg pkg</p>
+              <p>10 LPA</p>
+            </div>
+          </div>
+
+        </article>
+        <article class="tour-card">
+          <div class="tour-img-container">
+            <img src="{{ url_for("static",filename="image/Microsoft-logo.png")}}" class="tour-img" alt="">
+            <p class="tour-date">
+              november 25 2021
+            </p>
+          </div>
+          <div class="tour-info">
+            <h4>MICROSOFT</h4>
+            <p>Your Potential. Our Passion
+Where do you want to go today?
+Empowering us all
+Be what’s next.</p>
+            <div class="tour-footer">
+              <p>
+                <span>
+                  <i class="fas fa-map"></i>
+                  India
+                </span>
+              </p>
+              <p>Avg pkg</p>
+              <p>11 LPA</p>
+            </div>
+          </div>
+
+        </article>
+      </div>
+      <div class="tour-btn">
+        <a href="#" class="btn">all company</a>
+      </div>
+    </section>
+<section id="gallery">
+  <div class="gallery-center">
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/Google-Logo-small.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/Amazon-Logo.png")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/hp-Logo.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/Infosys-Logo.png")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+     <img src="{{ url_for("static",filename="image/Microsoft-Logo.png")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/samsung-Logo.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+     <img src="{{ url_for("static",filename="image/TCS.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+    <article class="gallery-img-container">
+      <img src="{{ url_for("static",filename="image/Wipro-Logo.jpg")}}" class="tour-img" alt="">
+      <a href="#" class="gallery-icon">
+        <i class="fas fa-search"></i>
+      </a>
+    </article>
+  </div>
+</section>
+<section>
+
+
+</section>
+</body>
+</html>

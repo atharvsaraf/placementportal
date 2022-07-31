@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+</head>
+<body>
+ <section class="section blog">
+      <!-- section title -->
+      <div class="section-title">
+        <h2>COMPANIES</h2>
+        <div class="underline"></div>
+      </div>
+      <!--end of section title -->
+      <div class="section-center blog-center">
+          {% for cid,nm,mail,tag,pswd,img in rec %}
+
+
+
+        <!-- single article -->
+        <div class="card">
+          <!-- front of the card -->
+          <div class="card-side card-front">
+            <img src="{{ url_for("static",filename="companyimg/"+img) }}" alt="" />
+            <div class="card-info">
+              <h4>{{ nm }}</h4>
+              <p>
+                {{ tag }}
+              </p>
+
+              <div class="card-footer">
+                <img src="{{ url_for("static",filename="image/gcoeaicon.png") }}" alt="author image" />
+
+              </div>
+            </div>
+          </div>
+          <!-- card back  -->
+          <div class="card-side card-back">
+            <a href="{{ url_for("studentapplied",cid=cid) }}" class="btn">Apply</a>
+          </div>
+        </div>
+          {% endfor %}
+        <!-- end of single article -->
+      </div></section>
+
+</body>
+</html>

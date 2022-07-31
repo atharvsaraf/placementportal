@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{{ url_for('static',filename='style.css') }}" type="text/css" rel="stylesheet" >
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<section>
+
+<div class="profileheading"><h3>Welcome {{ rec[1] }}</h3></div>
+<div class="profile">
+
+
+        <div class="card">
+          <!-- front of the card -->
+          <div class="card-side card-front">
+            <img src="{{ url_for("static",filename="image/"+rec[5]) }}" alt="" />
+            <div class="card-info">
+              <h4></h4>
+             <table class="profile_info">
+                 <tr > <th>Name </th> <th> {{ rec[1] }}</th></tr>
+                 <tr> <th>Email </th> <th> {{ rec[2] }}</th></tr>
+
+             </table>
+              <div class="card-footer">
+                <img src="{{ url_for("static",filename="image/gcoeaicon.png") }}" alt="author image" />
+                <p>GCOEA</p>
+              </div>
+            </div>
+          </div>
+          <!-- card back  -->
+          <div class="card-side card-back">
+            <a href="" class="btn">Apply</a>
+          </div>
+        </div>
+
+
+    <table class="newtable">
+
+        <tr class="row"><th>Name</th><td>{{ rec[1] }}</td></tr>
+
+    <tr class="row"><th>Email Id</th><td>{{ rec[2] }}</td></tr>
+        <tr class="row"><th>tagline</th><td>{{ rec[3] }}</td></tr>
+
+    </table></div>
+
+
+
+</section>
+<script src="{{ url_for("static",filename="resume.js") }}"></script>
+</body>
+</html>

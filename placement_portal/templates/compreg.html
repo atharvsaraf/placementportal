@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form Complete</title>
+    <!-- css -->
+    <link href="{{ url_for('static',filename='style1.css') }}" type="text/css" rel="stylesheet" >
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="services">
+          <!-- single service -->
+          <article class="service">
+            <span class="icon">
+              <i class="fas fa-check"></i>
+            </span>
+            <h4>quick and easy sign-up</h4>
+            <p>Enter your email address to create an account.</p>
+          </article>
+          <!-- single service -->
+          <article class="service">
+            <span class="icon">
+              <i class="fas fa-check"></i>
+            </span>
+            <h4>cross-platform solution</h4>
+            <p>
+              Preview your newsletters on any device before sending them out.
+            </p>
+          </article>
+          <!-- single service -->
+          <article class="service">
+            <span class="icon">
+              <i class="fas fa-check"></i>
+            </span>
+            <h4>start sending emails</h4>
+            <p>Use our API or pick our pre-built templates.</p>
+          </article>
+        </section>
+        <form class="form" action="{{ url_for("compreg") }}" method="POST" enctype="multipart/form-data">
+          <h2>create your account</h2>
+            <div class="msg">{{ msg }}</div>
+             <div class="form-control">
+            <label for="name">Company name</label>
+            <input
+              type="text"
+              id="name" name="name"
+              class="form-input"
+              placeholder="enter your full name"
+            />
+          </div>
+          <div class="form-control">
+            <!-- input -->
+            <label for="email">email</label>
+            <input
+              type="email"
+              id="email" name="email"
+              class="form-input"
+              placeholder="enter your email"
+            />
+          </div>
+          <!-- input -->
+
+          <!-- input -->
+          <div class="form-control">
+            <label for="tagline">Companies Tagline</label>
+            <input
+              type="text"
+              id="tagline" name="tagline"
+              class="form-input"
+              placeholder="tagline"
+            />
+          </div>
+             <div class="form-control">
+            <label for="password">password</label>
+            <input
+              type="password"
+              id="password" name="password"
+              class="form-input"
+              placeholder="type to create a password"
+            />
+          </div>
+            <div class="form-control">Select Image: <input type="file" name="image" accept="image/*"  required>
+    <input type="submit" value="upload " ></div>
+
+
+        <div class="updates">
+            <input type="checkbox" name="" id="" />
+            <p>get udpates and notifications about our product</p>
+          </div>
+          <input type="submit" class="btn">Create Account</input>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
